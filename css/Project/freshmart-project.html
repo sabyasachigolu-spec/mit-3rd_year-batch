@@ -1,61 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
+            box-sizing: border-box;
         }
 
-        body{
+        body {
             font-family: Arial, sans-serif;
+            background-color: #f5f6f7;
         }
-        nav{
+
+        nav {
             border: 2px solid lightgrey;
             display: flex;
-            justify-content:space-between;
+            justify-content: space-between;
             padding: 15px 50px;
             align-items: center;
         }
 
-        nav h1{
-            color:green;
+        nav h1 {
+            color: green;
             font-size: 26px;
         }
 
-        nav input{
+        nav input {
             width: 35%;
             border-radius: 10px;
             border: 1px solid lightgrey;
-            padding: 12px ;
+            padding: 12px;
         }
 
-        nav ul{
+        nav ul {
             display: flex;
             justify-content: space-between;
             gap: 50px;
             align-items: center;
         }
 
-        li{
+        li {
             list-style: none;
             font-size: 17px;
         }
+
+        .hero {
+            height: 45vh;
+            background: linear-gradient(to right, #d8f3dc, #b7e4c7);
+            margin: 0 50px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+        }
+        .hero-text h1{
+            font-size: 44px;
+        }
+
+        .hero-text p{
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        .hero-text button{
+            padding: 13px 25px;
+            background-color: green;
+            border-radius: 10px;
+            color: white;
+            border: none;
+        }
+        .cart-icon{
+            font-size: 120px;
+        }
+        .category-items{
+            display: flex;
+            gap: 20px;
+        }
+        .category{
+            background-color: white;
+            padding: 20px 50px;
+            margin-top: 20px;
+            border-bottom: 1px solid lightgrey;
+        }
+
+        .category h1{
+            font-size: 28px;
+            margin-bottom: 18px;
+        }
+        .item-img{
+            height: 80px;
+            width: 80px;
+            background-color: #d5efde;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;  
+            font-size: 40px;      
+        }
+
+        .item-text{
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .prod-card{
+            border:1px solid lightgrey;
+            height: 240px;
+            width: 220px;
+            border-radius: 10px;
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .prod-img{
+            height: 80%;
+            background-color: #f5f6f7;
+            font-size: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .prod-card p{
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .prod-price{
+            color: green;
+        }
+
+        .product-display{
+            padding: 30px 50px;
+        }
+
+        .product-display h1{
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .products{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
     </style>
 </head>
+
 <body>
     <nav>
         <h1>FreshMart</h1>
-        <input type="text" placeholder="Search fruits and vegitables..."/>
+        <input type="text" placeholder="Search fruits and vegitables..." />
         <ul>
             <li>Home</li>
             <li>Product</li>
             <li>Cart</li>
         </ul>
     </nav>
-    
+    <main>
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Fresh groceries <br>
+                    delivered to you.</h1>
+                <p>Fruits, vegetables and daily essentials delivered fresh.</p>
+                <button>Shop Now</button>
+            </div>
+
+            <div class="cart-icon">🛒</div>
+        </div>
+
+        <div class="category">
+            <h1>Shop by Category</h1>
+
+            <div class="category-items">
+                <div class="items">
+                    <div class="item-img">🍎 </div>
+                    <p class="item-text">Fruits</p>
+                </div>
+                <div class="items">
+                    <div class="item-img">🥦 </div>
+                    <p class="item-text">Vegetables</p>
+                </div>
+                <div class="items">
+                    <div class="item-img">🥛 </div>
+                    <p class="item-text">Dairy</p>
+                </div>
+                <div class="items">
+                    <div class="item-img">🍞 </div>
+                    <p class="item-text">Bakery</p>
+                </div>
+                <div class="items">
+                    <div class="item-img">🧃 </div>
+                    <p class="item-text">Drinks</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-display">
+            <h1>Popular Products</h1>
+
+            <div class="products">
+                <div class="prod-card">
+                    <div class="prod-img">
+                        🍎
+                    </div>
+
+                    <p>Fresh Apples</p>
+                    <p class="prod-price">₹120 / kg</p>
+
+                </div>
+                <div class="prod-card">
+                    <div class="prod-img">
+                        🍎
+                    </div>
+
+                    <p>Fresh Apples</p>
+                    <p class="prod-price">₹120 / kg</p>
+
+                </div>
+                <div class="prod-card">
+                    <div class="prod-img">
+                        🍎
+                    </div>
+
+                    <p>Fresh Apples</p>
+                    <p class="prod-price">₹120 / kg</p>
+
+                </div>
+                <div class="prod-card">
+                    <div class="prod-img">
+                        🍎
+                    </div>
+
+                    <p>Fresh Apples</p>
+                    <p class="prod-price">₹120 / kg</p>
+
+                </div>
+                <div class="prod-card">
+                    <div class="prod-img">
+                        🍎
+                    </div>
+
+                    <p>Fresh Apples</p>
+                    <p class="prod-price">₹120 / kg</p>
+
+                </div>
+                <div class="prod-card">
+                    <div class="prod-img">
+                        🍎
+                    </div>
+
+                    <p>Fresh Apples</p>
+                    <p class="prod-price">₹120 / kg</p>
+
+                </div>
+                <div class="prod-card">
+                    <div class="prod-img">
+                        🍎
+                    </div>
+
+                    <p>Fresh Apples</p>
+                    <p class="prod-price">₹120 / kg</p>
+
+                </div>
+                <div class="prod-card">
+                    <div class="prod-img">
+                        🍎
+                    </div>
+
+                    <p>Fresh Apples</p>
+                    <p class="prod-price">₹120 / kg</p>
+
+                </div>
+                <div class="prod-card">
+                    <div class="prod-img">
+                        🍎
+                    </div>
+
+                    <p>Fresh Apples</p>
+                    <p class="prod-price">₹120 / kg</p>
+
+                </div>
+                <div class="prod-card">
+                    <div class="prod-img">
+                        🍎
+                    </div>
+
+                    <p>Fresh Apples</p>
+                    <p class="prod-price">₹120 / kg</p>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
 </body>
+
 </html>
